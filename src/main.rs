@@ -1076,7 +1076,7 @@ fn render_task_table(frame: &mut Frame, area: Rect, app: &App, column_widths: &[
             let is_active_cell = is_selected_row && app.selected_task_field == *field;
             let style = if is_active_cell {
                 match app.input_mode {
-                    InputMode::Editing => Style::default().fg(Color::Black).bg(Color::Yellow),
+                    InputMode::Editing => Style::default().fg(Color::White).bg(Color::Magenta),
                     InputMode::Normal => Style::default().bg(Color::Blue),
                 }
             } else { Style::default() };

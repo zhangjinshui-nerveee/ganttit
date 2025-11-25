@@ -1,37 +1,326 @@
 {
   "projects": [
     {
-      "project_name": "New Project",
-      "project_start_date": "2024-08-01",
-      "week_to_show": 0,
+      "project_name": "Figure-8 Core",
+      "project_start_date": "2025-11-07",
+      "week_to_show": 1,
       "tasks": [
         {
           "id": 1,
-          "name": "Requirement Gathering",
-          "assigned_to": "Alice",
-          "duration": 5,
-          "progress": 100,
+          "name": "Build magcore in CAD",
+          "assigned_to": "Emmy,Hunter",
+          "duration": 21,
+          "progress": 0,
           "dependencies": [],
-          "manual_start_date": null,
+          "manual_start_date": "2025-11-07",
           "details": null
         },
         {
           "id": 2,
-          "name": "UI/UX Design",
-          "assigned_to": "Bob",
+          "name": "CAD 3D model to planar structure",
+          "assigned_to": "Emmy",
           "duration": 7,
-          "progress": 50,
-          "dependencies": [],
+          "progress": 0,
+          "dependencies": [
+            1
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 3,
+          "name": "watercut plates",
+          "assigned_to": "Emmy",
+          "duration": 7,
+          "progress": 0,
+          "dependencies": [
+            2
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 4,
+          "name": "assembly mag-cores",
+          "assigned_to": "Emmy",
+          "duration": 4,
+          "progress": 0,
+          "dependencies": [
+            3
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 5,
+          "name": "COMSOL setup",
+          "assigned_to": "Burak",
+          "duration": 1,
+          "progress": 0,
+          "dependencies": [
+            1
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 6,
+          "name": "Import from CAD to COMSOL",
+          "assigned_to": "Burak",
+          "duration": 3,
+          "progress": 0,
+          "dependencies": [
+            5,
+            1
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 7,
+          "name": "simulation mag-field",
+          "assigned_to": "Burak",
+          "duration": 1,
+          "progress": 0,
+          "dependencies": [
+            2
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 8,
+          "name": "simulate inductance",
+          "assigned_to": "Burak",
+          "duration": 7,
+          "progress": 0,
+          "dependencies": [
+            7
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 9,
+          "name": "measurement inductance w/ multimeter",
+          "assigned_to": "Emmy",
+          "duration": 3,
+          "progress": 0,
+          "dependencies": [
+            4
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 10,
+          "name": "integrate core to circuit",
+          "assigned_to": "Jinshui",
+          "duration": 1,
+          "progress": 0,
+          "dependencies": [
+            9
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 11,
+          "name": "system testing",
+          "assigned_to": "jinshui",
+          "duration": 21,
+          "progress": 0,
+          "dependencies": [
+            10
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 12,
+          "name": "paper drafting ",
+          "assigned_to": "all",
+          "duration": 30,
+          "progress": 0,
+          "dependencies": [
+            9
+          ],
           "manual_start_date": null,
           "details": null
         }
       ]
     },
     {
-      "project_name": "New Project 2",
-      "project_start_date": "2025-08-24",
+      "project_name": "DiSeP-STATCOM",
+      "project_start_date": "2025-11-07",
       "week_to_show": 0,
-      "tasks": []
+      "tasks": [
+        {
+          "id": 1,
+          "name": "simulation framework",
+          "assigned_to": "jinshui",
+          "duration": 7,
+          "progress": 100,
+          "dependencies": [],
+          "manual_start_date": "2025-11-02",
+          "details": null
+        },
+        {
+          "id": 2,
+          "name": "pid param refine",
+          "assigned_to": "zane",
+          "duration": 13,
+          "progress": 0,
+          "dependencies": [
+            1
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 3,
+          "name": "labview code basis",
+          "assigned_to": "jinshui",
+          "duration": 7,
+          "progress": 100,
+          "dependencies": [
+            1
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 4,
+          "name": "circuit assembly (thermal)",
+          "assigned_to": "Chris",
+          "duration": 10,
+          "progress": 0,
+          "dependencies": [],
+          "manual_start_date": "2025-11-16",
+          "details": null
+        },
+        {
+          "id": 5,
+          "name": "circuit thermal testing",
+          "assigned_to": "zane & chris",
+          "duration": 14,
+          "progress": 0,
+          "dependencies": [
+            4
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 6,
+          "name": "buy vol/cur adc modules",
+          "assigned_to": "maya",
+          "duration": 14,
+          "progress": 100,
+          "dependencies": [],
+          "manual_start_date": "2025-11-07",
+          "details": null
+        },
+        {
+          "id": 7,
+          "name": "prototyping dc voltage sensor",
+          "assigned_to": "jinshui",
+          "duration": 7,
+          "progress": 0,
+          "dependencies": [
+            6
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 8,
+          "name": "current sampler test",
+          "assigned_to": "zane",
+          "duration": 7,
+          "progress": 0,
+          "dependencies": [
+            6
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 9,
+          "name": "inverter (as grid) test",
+          "assigned_to": "jinshui",
+          "duration": 21,
+          "progress": 0,
+          "dependencies": [],
+          "manual_start_date": "2025-11-10",
+          "details": null
+        },
+        {
+          "id": 10,
+          "name": "system testing",
+          "assigned_to": "Unassigned",
+          "duration": 20,
+          "progress": 0,
+          "dependencies": [
+            7,
+            8,
+            9
+          ],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 11,
+          "name": "paper drafting",
+          "assigned_to": "jinshui",
+          "duration": 100,
+          "progress": 0,
+          "dependencies": [
+            1
+          ],
+          "manual_start_date": null,
+          "details": null
+        }
+      ]
+    },
+    {
+      "project_name": "startup",
+      "project_start_date": "2025-11-17",
+      "week_to_show": 0,
+      "tasks": [
+        {
+          "id": 1,
+          "name": "joulesaccelerator appl.",
+          "assigned_to": "jinshui",
+          "duration": 8,
+          "progress": 0,
+          "dependencies": [],
+          "manual_start_date": "2025-11-17",
+          "details": null
+        },
+        {
+          "id": 2,
+          "name": "update pitching deck",
+          "assigned_to": "alex",
+          "duration": 20,
+          "progress": 70,
+          "dependencies": [],
+          "manual_start_date": null,
+          "details": null
+        },
+        {
+          "id": 3,
+          "name": "send deck to alicia / prith",
+          "assigned_to": "jinshui",
+          "duration": 1,
+          "progress": 0,
+          "dependencies": [
+            2
+          ],
+          "manual_start_date": null,
+          "details": null
+        }
+      ]
     }
   ],
   "active_project_index": 1
